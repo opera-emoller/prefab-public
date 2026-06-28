@@ -1,0 +1,16 @@
+id = "transition-base"
+display_name = "Transition Base"
+description = "Generic, shader-agnostic room-transition engine. transition_engine(target_room, shader, duration) captures the outgoing and incoming rooms to surfaces and composites them through any progress-driven shader. Base for linked transition variants; ships a default cross-fade shader."
+version = "1.0.0"
+kind = "library"
+license = "Apache-2.0"
+
+# The importable surface: the engine script, its driver object, and the default
+# shader. The demo (rm_a / rm_b / obj_demo_control) is scaffolding and is NOT
+# exported.
+[export]
+include = [
+  "scripts/scr_transition_base",
+  "objects/obj_transition",
+  "shaders/shdr_transition_fade",
+]

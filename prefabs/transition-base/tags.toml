@@ -1,0 +1,6 @@
+[prefab]
+# Curate tags against the taxonomy (`gmx prefab facets`), e.g.:
+# tags = ["role:vfx"]
+tags = []
+
+[assets]

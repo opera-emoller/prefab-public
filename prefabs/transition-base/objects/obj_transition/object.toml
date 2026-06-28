@@ -1,0 +1,4 @@
+#:schema ../../.gm-schema/v1.json#object
+
+# Must survive room_goto so the driver keeps compositing in the target room.
+persistent = true
