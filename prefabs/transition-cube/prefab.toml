@@ -1,0 +1,18 @@
+id = "transition-cube"
+display_name = "Transition Cube"
+description = "Cube room transition: the outgoing and incoming rooms map onto the faces of a rotating 3D cube with a floor reflection. room_goto_transition_cube(target_room, duration) drives the shared transition engine with a perspective cube-rotation shader. A linked variant of transition-base — it inherits the engine and driver object and ships only its own wrapper script and shader."
+version = "1.0.0"
+kind = "library"
+license = "MIT"
+
+# Inherits transition-base's engine + driver object via the root `link.toml`
+# (the base link is a pinned `source` there, not in this producer manifest).
+
+# Cube's OWN additions only: the wrapper API script and the cube shader.
+# The engine script and obj_transition come from the base chain; the demo
+# rooms / control object are scaffolding and are NOT exported.
+[export]
+include = [
+  "scripts/scr_transition_cube",
+  "shaders/shdr_transition_cube",
+]

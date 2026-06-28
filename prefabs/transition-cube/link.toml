@@ -1,0 +1,2 @@
+source = "git+https://github.com/opera-emoller/prefab-public#transition-base-1.0.0?path=prefabs/transition-base"
+unset = []
