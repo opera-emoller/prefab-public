@@ -1,0 +1,18 @@
+id = "transition-dreamy"
+display_name = "Transition Dreamy"
+description = "Dreamy room transition: a wavy, dreamlike cross-dissolve. room_goto_transition_dreamy(target_room, duration) drives the shared transition engine with a gentle vertical-wobble shader. A linked variant of transition-base — it inherits the engine and driver object and ships only its own wrapper script and shader."
+version = "1.0.0"
+kind = "library"
+license = "MIT"
+
+# Inherits transition-base's engine + driver object via the root `link.toml`
+# (the base link is a pinned `source` there, not in this producer manifest).
+
+# Dreamy's OWN additions only: the wrapper API script and the dreamy shader.
+# The engine script and obj_transition come from the base chain; the demo
+# rooms / control object are scaffolding and are NOT exported.
+[export]
+include = [
+  "scripts/scr_transition_dreamy",
+  "shaders/shdr_transition_dreamy",
+]
